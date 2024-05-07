@@ -84,10 +84,9 @@ export default function DocAppointment() {
                     <div key={appointment.id} className="appointment-card">
                         <div className="appointment-details">
                             <img src="./src/assets/appointment.jpg" alt="" />
-                            <h3>{appointment.date}</h3>
-                            <p>{appointment.date}</p>
-                            <p>{appointment.timing}</p>
-                            <p>{appointment.description}</p>
+                            <p><strong>Date:</strong> {appointment.date}</p>
+                            <p><strong>Time:</strong> {appointment.timing}</p>
+                            <p><strong>Description:</strong> {appointment.description}</p>
                             {appointment.status ? (
                                 <button onClick={() => cancelAppointment(appointment.id)} className="not-booked">Cancel</button>
                             ) : (
